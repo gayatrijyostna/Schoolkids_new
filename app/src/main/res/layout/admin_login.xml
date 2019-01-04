@@ -15,21 +15,22 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="ADMIN LOG IN"
-            android:textColor="#0000cd"
+            android:textColor="@drawable/gradient_text"
             android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textStyle="italic" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="3dp"
+            android:layout_height="5dp"
             android:layout_marginTop="10dp"
             android:alpha="0.3"
-            android:background="#0000cd"></View>
+            android:background="@drawable/gradient"></View>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
             android:text="Your Username"
             android:textSize="17dp" />
 
@@ -50,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Your Password"
+            android:layout_marginLeft="10dp"
             android:textSize="17dp" />
 
         <EditText

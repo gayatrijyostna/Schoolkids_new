@@ -41,7 +41,7 @@ public class Database_admin extends SQLiteOpenHelper {
 
     }
 
-    public void insertValues(String email_str, String pass_str) {
+    public void insertValues(String name_str, String username_str, String emailStr, String password_str, String email_str, String pass_str) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
 
         ContentValues values = new ContentValues();
