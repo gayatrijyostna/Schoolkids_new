@@ -16,7 +16,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="ADMIN HOME PAGE"
-            android:textColor="@drawable/gradient_text"
+            android:textColor="#2E8B57"
             android:textSize="25dp"
             android:textStyle="italic" />
 

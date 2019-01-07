@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Admin_homepage" />
+        <activity android:name=".Signup"></activity>
         <activity
             android:name=".Navigation_drawer"
             android:label="@string/title_activity_navigation_drawer"
