@@ -64,11 +64,15 @@ public class Navigation_drawer extends AppCompatActivity
 
         } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.Route_details) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.Route_landmarks) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.bus_position) {
+
+        }else if (id == R.id.change_password) {
+
+        }else if (id == R.id.signout) {
 
         }
 

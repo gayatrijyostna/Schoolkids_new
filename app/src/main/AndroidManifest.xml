@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TabMainActivity">
+        <activity android:name=".Admin_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Admin_homepage" />
         <activity
             android:name=".Navigation_drawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Investigator_profile"></activity>
+        <activity android:name=".Investigator_profile" />
+        <activity android:name=".Update_investigator_profile" />
+        <activity android:name=".View_routedetails" />
+        <activity android:name=".Recycler_viewroute"></activity>
     </application>
 
 </manifest>

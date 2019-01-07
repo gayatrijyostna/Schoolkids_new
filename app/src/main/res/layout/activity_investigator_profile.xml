@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Investigator_profile"
     android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 
     <TextView
         android:layout_width="match_parent"
@@ -96,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/round"
                 android:padding="10dp"
-                android:hint="9700363455"
+                android:hint="amm@gmail.com"
                 android:layout_marginLeft="30dp"
                 />
         </LinearLayout>
@@ -117,6 +122,7 @@
                 android:layout_height="wrap_content"
                 android:text="password: "
                 android:textSize="15dp"
+                android:layout_marginRight="20dp"
                 android:textStyle="bold" />
 
             <EditText
@@ -125,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/round"
                 android:padding="10dp"
-                android:hint="enter ur password"
+                android:hint="admin123"
                 android:inputType="textPassword" />
         </TableRow></TableLayout>
     <TableLayout
@@ -166,7 +172,8 @@
                 android:id="@+id/radiogroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:checkedButton="@id/male">
 
                 <RadioButton
                     android:id="@+id/male"
@@ -253,8 +260,22 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round"
             android:padding="10dp"
-            android:hint="9700363455"
+            android:hint="Jaya nagar,4th block"
             android:layout_marginLeft="10dp"
             />
     </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+  android:gravity="center">
+    <Button
+        android:id="@+id/update"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#D2691E"
+        android:text="Update profile" />
 </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

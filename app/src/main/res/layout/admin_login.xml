@@ -15,7 +15,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="ADMIN LOG IN"
-            android:textColor="@drawable/gradient_text"
+            android:textColor="#2E8B57"
             android:textSize="25dp"
             android:textStyle="italic" />
 
@@ -92,5 +92,12 @@
         android:paddingRight="20dp"
         android:text="LOGIN"
         android:textColor="#ffffff"/>
+
 </RelativeLayout>
+    <TextView
+        android:id="@+id/signup_here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Not a member?SignUp here"
+        android:layout_marginTop="10dp"/>
 </LinearLayout>
