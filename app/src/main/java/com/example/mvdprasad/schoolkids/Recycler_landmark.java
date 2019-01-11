@@ -9,19 +9,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Recycler_viewroute  extends RecyclerView.Adapter<Recycler_viewroute.ViewHolderClass> {
+public class Recycler_landmark extends RecyclerView.Adapter<Recycler_viewroute.ViewHolderClass> {
     Context context;
-  CheckBox[] cb;
+    CheckBox[] cb;
     String[] arr1;
     String[] arr2;
     String[] arr3;
     String[] arr4;
     String[] arr5;
 
-    public Recycler_viewroute(Context Navigation_drawer, String[] arr1, String[] arr2,String[] arr3,String[] arr4,String[] arr5) {
+    public Recycler_landmark(Context Navigation_drawer, String[] arr1, String[] arr2, String[] arr3, String[] arr4, String[] arr5) {
         context = Navigation_drawer;
         this.cb = cb;
         this.arr1=arr1;
@@ -36,7 +35,7 @@ public class Recycler_viewroute  extends RecyclerView.Adapter<Recycler_viewroute
     @Override
     public Recycler_viewroute.ViewHolderClass onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from( context ).inflate( R.layout.activity_recycler_viewroute, viewGroup, false );
-        ViewHolderClass viewHolderClass = new Recycler_viewroute.ViewHolderClass( view );
+        Recycler_viewroute.ViewHolderClass viewHolderClass = new Recycler_viewroute.ViewHolderClass( view );
         return viewHolderClass;
     }
 
@@ -58,7 +57,7 @@ public class Recycler_viewroute  extends RecyclerView.Adapter<Recycler_viewroute
         return arr1.length;
     }
 
-    public static class ViewHolderClass extends RecyclerView.ViewHolder {
+    public class ViewHolderClass extends RecyclerView.ViewHolder {
         CheckBox checkBox;
         TextView txtview;
         TextView txtview1;
@@ -66,14 +65,15 @@ public class Recycler_viewroute  extends RecyclerView.Adapter<Recycler_viewroute
         TextView txtview3;
         TextView txtview4;
 
-   public ViewHolderClass(@NonNull View itemView) {
-                super( itemView );
-               checkBox = itemView.findViewById( R.id.cb );
-                txtview=itemView.findViewById(R.id.busno);
-                txtview1=itemView.findViewById( R.id.routenme );
-                txtview2=itemView.findViewById( R.id.routefrom );
-               txtview3=itemView.findViewById( R.id.routeto );
-                txtview4=itemView.findViewById( R.id.buspwd );
-            }
+        public ViewHolderClass(@NonNull View itemView) {
+            super( itemView );
+            checkBox = itemView.findViewById( R.id.cb );
+            txtview=itemView.findViewById(R.id.busno);
+            txtview1=itemView.findViewById( R.id.routenme );
+            txtview2=itemView.findViewById( R.id.routefrom );
+            txtview3=itemView.findViewById( R.id.routeto );
+            txtview4=itemView.findViewById( R.id.buspwd );
+        }
     }
 }
+

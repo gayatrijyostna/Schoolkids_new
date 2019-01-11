@@ -1,8 +1,11 @@
 package com.example.mvdprasad.schoolkids;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -52,23 +55,36 @@ public class Navigation_drawer extends AppCompatActivity
     }
 
 
-    @SuppressWarnings("StatementWithEmptyBody")
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_Studentimage) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_Profile) {
+            startActivity(new Intent(Navigation_drawer.this, Investigator_profile.class));
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.Student_list) {
 
         } else if (id == R.id.Route_details) {
+            View_routedetails f3=new View_routedetails();
+            FragmentManager fm=getSupportFragmentManager();
+            FragmentTransaction ft=fm.beginTransaction();
+            ft.replace(R.id.frame, f3);
+            ft.commit();
+
 
         } else if (id == R.id.Route_landmarks) {
+            Route_landmarks f4=new Route_landmarks();
+            FragmentManager fm=getSupportFragmentManager();
+            FragmentTransaction ft=fm.beginTransaction();
+            ft.replace(R.id.frame, f4);
+            ft.commit();
 
         } else if (id == R.id.bus_position) {
+            startActivity(new Intent(Navigation_drawer.this, Busposition_activity.class));
 
         }else if (id == R.id.change_password) {
 

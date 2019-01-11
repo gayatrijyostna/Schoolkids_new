@@ -7,7 +7,12 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string-array name="date">
-        <item></item>
+    <string-array name="Select">
+        <item>-SELECT-</item>
+        <item>jayanagar to majestic</item>
+        <item>majestic to jayanagar</item>
+        <item>kormangala to majestic</item>
+        <item>jayanagar to kormangala</item>
+
     </string-array>
 </resources>

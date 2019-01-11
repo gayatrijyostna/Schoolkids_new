@@ -18,7 +18,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="VIEW ROUTE DETAILS"
-            android:textColor="@drawable/gradient_text"
+            android:textColor="#2E8B57"
             android:textSize="25dp"
             android:textStyle="italic" />
 
@@ -35,7 +35,7 @@
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="70dp"
-    android:gravity="center"
+    android:gravity="end"
         android:orientation="horizontal"
        >
 
@@ -68,7 +68,13 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -94,41 +100,48 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:text="Route Name"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:text="Route From"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:text="Route To"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="15dp"
                 android:text="Bus pwd"
                 android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
-    </HorizontalScrollView>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>

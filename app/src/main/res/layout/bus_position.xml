@@ -10,7 +10,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="VIEW BUS POSITION"
-        android:textColor="@drawable/gradient_text"
+        android:textColor="#2E8B57"
         android:textSize="25dp"
         android:textStyle="italic" />
 
@@ -20,29 +20,46 @@
         android:layout_marginTop="10dp"
         android:alpha="0.3"
         android:background="@drawable/gradient"></View>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Bus Route"
-        android:textSize="17dp" />
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Bus Route"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="30dp"
+            android:text=":" />
+
+        <Spinner
+            android:id="@+id/date"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/Select"
+
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:hint="dd"></Spinner>
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/view_position"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:paddingLeft="30dp"
-        android:text=":"
-        android:textSize="17dp" />
-
-
-
-</LinearLayout>
+        android:text="View Position"
+        android:background="@drawable/oval"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
 
 
 </LinearLayout>

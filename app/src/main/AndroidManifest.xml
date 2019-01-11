@@ -17,15 +17,20 @@
             </intent-filter>
         </activity>
         <activity android:name=".Admin_homepage" />
-        <activity android:name=".Signup"></activity>
+        <activity android:name=".Signup" />
         <activity
             android:name=".Navigation_drawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Investigator_profile" />
         <activity android:name=".Update_investigator_profile" />
-        <activity android:name=".View_routedetails" />
-        <activity android:name=".Recycler_viewroute"></activity>
+        <activity android:name=".Addroute" />
+        <activity android:name=".Edit" />
+        <activity android:name=".Busposition_activity" />
+        <activity android:name=".Route_landmarks" />
+        <activity android:name=".Recycler_landmark" />
+        <activity android:name=".viewlandmark" />
+        <activity android:name=".Add_landmark"></activity>
     </application>
 
 </manifest>

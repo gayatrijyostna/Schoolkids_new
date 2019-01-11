@@ -17,9 +17,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="INVESTIGATOR PROFILE"
-            android:textColor="@drawable/gradient_text"
-            android:textSize="25dp"
+            android:text="UPDATE INVESTIGATOR PROFILE"
+            android:textColor="#2E8B57"
+            android:textSize="20dp"
             android:textStyle="italic" />
 
         <View
@@ -41,7 +41,7 @@
             <TableRow>
 
                 <TextView
-                    android:id="@+id/username"
+                    android:id="@+id/user_name1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Username : "
@@ -49,11 +49,12 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edit_name"
+                    android:id="@+id/edit_username1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/round"
                     android:padding="10dp"
+
                     android:hint="admin" />
             </TableRow>
 
@@ -67,7 +68,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/name1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name :"
@@ -75,7 +76,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edit_name"
+                    android:id="@+id/edit_name1"
                     android:background="@drawable/round"
                     android:padding="10dp"
                     android:layout_width="wrap_content"
@@ -89,7 +90,7 @@
                 android:orientation="horizontal"
                 >
                 <TextView
-                    android:id="@+id/email"
+                    android:id="@+id/email1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email : "
@@ -97,7 +98,7 @@
                     android:textStyle="bold"/>
 
                 <EditText
-                    android:id="@+id/edit_email"
+                    android:id="@+id/edit_email1"
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/round"
@@ -118,7 +119,7 @@
                 android:layout_marginTop="15dp">
 
                 <TextView
-                    android:id="@+id/password"
+                    android:id="@+id/password1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="password: "
@@ -127,7 +128,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edit_password"
+                    android:id="@+id/edit_password1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/round"
@@ -177,13 +178,13 @@
                         android:checkedButton="@id/male">
 
                         <RadioButton
-                            android:id="@+id/male"
+                            android:id="@+id/male1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="male" />
 
                         <RadioButton
-                            android:id="@+id/female"
+                            android:id="@+id/female1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="female" />
@@ -200,7 +201,7 @@
             android:orientation="horizontal"
             >
             <TextView
-                android:id="@+id/mobile"
+                android:id="@+id/mobile1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mobile : "
@@ -209,7 +210,7 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/edit_mobile"
+                android:id="@+id/edit_mobile1"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round"
@@ -233,7 +234,7 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/phone"
+                android:id="@+id/phone1"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round"
@@ -257,8 +258,8 @@
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/Address"
-                android:layout_width="220dp"
+                android:id="@+id/Address1"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round"
                 android:padding="10dp"
@@ -271,10 +272,10 @@
             android:layout_height="wrap_content"
             android:gravity="center">
             <Button
-                android:id="@+id/update"
+                android:id="@+id/updateprofile"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="#D2691E"
                 android:text="Update profile" />
         </LinearLayout>

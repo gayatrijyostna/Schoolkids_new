@@ -48,6 +48,9 @@ public class Admin_page  extends AppCompatActivity {
 
             }
         } );
+
+
+
         TextView signuphere=findViewById(R.id.signup_here);
         signuphere.setOnClickListener(new View.OnClickListener(){
             @Override
