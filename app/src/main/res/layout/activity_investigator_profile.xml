@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Investigator_profile"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bus"
+    android:alpha="0.5"
+    >
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,7 +23,8 @@
         android:text="INVESTIGATOR PROFILE"
         android:textColor="#2E8B57"
         android:textSize="25dp"
-        android:textStyle="italic" />
+        android:textStyle="italic"
+        />
 
     <View
         android:layout_width="match_parent"
@@ -46,7 +50,8 @@
                 android:layout_height="wrap_content"
                 android:text="Username : "
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textColor="#000000"/>
 
             <EditText
                 android:id="@+id/edit_username"
@@ -72,7 +77,8 @@
                 android:layout_height="wrap_content"
                 android:text="Name :"
                 android:textSize="15dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
             <EditText
                 android:id="@+id/edit_email"
@@ -93,7 +99,8 @@
                 android:layout_height="wrap_content"
                 android:text="Email : "
                 android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                />
 
             <EditText
                 android:id="@+id/email"
@@ -123,7 +130,8 @@
                 android:text="password: "
                 android:textSize="15dp"
                 android:layout_marginRight="20dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
             <EditText
                 android:id="@+id/edit_password"

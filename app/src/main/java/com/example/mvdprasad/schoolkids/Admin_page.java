@@ -37,7 +37,7 @@ public class Admin_page  extends AppCompatActivity {
                     db = new Database_admin( getApplicationContext() );
                     data = db.getRetrive( username, pswd );
                     if (!data.isEmpty()) {
-                        Intent i = new Intent( Admin_page.this, Admin_homepage.class );
+                        Intent i = new Intent( Admin_page.this, Navigation_drawer.class );
                         startActivity( i );
                     } else {
                         Toast.makeText( Admin_page.this, "invalid username and password", Toast.LENGTH_SHORT ).show();
