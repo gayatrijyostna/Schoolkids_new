@@ -4,68 +4,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".Recycler_viewroute"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    tools:context=".Recycler_viewroute">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
-<CheckBox
-    android:id="@+id/cb"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="15dp"/>
-    <TextView
-        android:id="@+id/busno"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:text="100"
-        android:textSize="15dp"
-         />
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp" />
 
-    <TextView
-        android:id="@+id/routenme"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:text="Jayanagar 9th block to majestic"
-        android:textSize="10dp"
-         />
-    <TextView
-        android:id="@+id/routefrom"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="Jayanagar"
-        android:textSize="10dp"
-        />
-    <TextView
-        android:id="@+id/routeto"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="majestic"
-        android:textSize="10dp"
-        />
-    <TextView
-        android:id="@+id/buspwd"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:text="100"
-        android:textSize="10dp"
-        />
+        <TextView
+            android:id="@+id/busno"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="100"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/routenme"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Jayanagar 9th block to majestic"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/routefrom"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Jayanagar"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/routeto"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="majestic"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/buspwd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="100"
+            android:textSize="10dp" />
+
+
     </LinearLayout>
 </HorizontalScrollView>

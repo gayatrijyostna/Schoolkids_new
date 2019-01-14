@@ -7,8 +7,8 @@ public class Addroute extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.add_route );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.add_route);
 
     }
 }

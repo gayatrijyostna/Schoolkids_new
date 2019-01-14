@@ -21,27 +21,32 @@ public class Navigation_drawer extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_navigation_drawer );
-        Toolbar toolbar = (Toolbar) findViewById( R.id.toolbar );
-        setSupportActionBar( toolbar );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_navigation_drawer);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-
-        DrawerLayout drawer = (DrawerLayout) findViewById( R.id.drawer_layout );
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close );
-        drawer.addDrawerListener( toggle );
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById( R.id.nav_view );
-        navigationView.setNavigationItemSelectedListener( this );
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        View_routedetails f3 = new View_routedetails();
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.replace(R.id.frame, f3);
+        ft.commit();
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById( R.id.drawer_layout );
-        if (drawer.isDrawerOpen( GravityCompat.START )) {
-            drawer.closeDrawer( GravityCompat.START );
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
@@ -50,10 +55,9 @@ public class Navigation_drawer extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate( R.menu.navigation_drawer, menu );
+        getMenuInflater().inflate(R.menu.navigation_drawer, menu);
         return true;
     }
-
 
 
     @Override
@@ -69,31 +73,31 @@ public class Navigation_drawer extends AppCompatActivity
         } else if (id == R.id.Student_list) {
 
         } else if (id == R.id.Route_details) {
-            View_routedetails f3=new View_routedetails();
-            FragmentManager fm=getSupportFragmentManager();
-            FragmentTransaction ft=fm.beginTransaction();
+            View_routedetails f3 = new View_routedetails();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.frame, f3);
             ft.commit();
 
 
         } else if (id == R.id.Route_landmarks) {
-            Route_landmarks f4=new Route_landmarks();
-            FragmentManager fm=getSupportFragmentManager();
-            FragmentTransaction ft=fm.beginTransaction();
+            Route_landmarks f4 = new Route_landmarks();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
             ft.replace(R.id.frame, f4);
             ft.commit();
 
         } else if (id == R.id.bus_position) {
             startActivity(new Intent(Navigation_drawer.this, Busposition_activity.class));
 
-        }else if (id == R.id.change_password) {
+        } else if (id == R.id.change_password) {
 
-        }else if (id == R.id.signout) {
+        } else if (id == R.id.signout) {
 
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById( R.id.drawer_layout );
-        drawer.closeDrawer( GravityCompat.START );
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }

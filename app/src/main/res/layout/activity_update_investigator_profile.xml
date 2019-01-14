@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Investigator_profile"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Investigator_profile">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,7 +29,7 @@
             android:layout_height="5dp"
             android:layout_marginTop="10dp"
             android:alpha="0.3"
-            android:background="@drawable/gradient"></View>
+            android:background="@drawable/gradient"/>
 
         <TableLayout
             android:id="@+id/line1"
@@ -50,18 +52,18 @@
 
                 <EditText
                     android:id="@+id/edit_username1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/round"
-                    android:padding="10dp"
+                    android:hint="admin"
 
-                    android:hint="admin" />
+                    android:padding="10dp" />
             </TableRow>
 
             <TableRow
 
 
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
@@ -77,105 +79,105 @@
 
                 <EditText
                     android:id="@+id/edit_name1"
-                    android:background="@drawable/round"
-                    android:padding="10dp"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="manager HR" />
+                    android:background="@drawable/round"
+                    android:hint="manager HR"
+                    android:padding="10dp" />
             </TableRow>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginTop="15dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/email1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email : "
                     android:textSize="15dp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/edit_email1"
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round"
-                    android:padding="10dp"
-                    android:hint="amm@gmail.com"
                     android:layout_marginLeft="30dp"
-                    />
+                    android:background="@drawable/round"
+                    android:hint="amm@gmail.com"
+                    android:padding="10dp" />
             </LinearLayout>
 
             <TableRow
 
 
-
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="horizontal"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/password1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
                     android:text="password: "
                     android:textSize="15dp"
-                    android:layout_marginRight="20dp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/edit_password1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/round"
-                    android:padding="10dp"
                     android:hint="admin123"
-                    android:inputType="textPassword" />
-            </TableRow></TableLayout>
+                    android:inputType="textPassword"
+                    android:padding="10dp" />
+            </TableRow>
+        </TableLayout>
+
         <TableLayout
             android:id="@+id/line2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/line1"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
 
             <TableLayout
                 android:id="@+id/line3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/line2"
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:orientation="horizontal">
+
                 <TableRow
 
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    >
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:id="@+id/gender"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Gender: "
                         android:paddingTop="5dp"
+                        android:text="Gender: "
                         android:textSize="15dp"
                         android:textStyle="bold" />
 
                     <RadioGroup
                         android:id="@+id/radiogroup"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:checkedButton="@id/male">
+                        android:checkedButton="@id/male"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/male1"
@@ -194,90 +196,93 @@
             </TableLayout>
 
         </TableLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/mobile1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mobile : "
                 android:layout_marginLeft="25dp"
+                android:text="Mobile : "
                 android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edit_mobile1"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round"
-                android:padding="10dp"
-                android:hint="9700363455"
                 android:layout_marginLeft="10dp"
-                />
+                android:background="@drawable/round"
+                android:hint="9700363455"
+                android:padding="10dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone : "
                 android:layout_marginLeft="25dp"
+                android:text="Phone : "
                 android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/phone1"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round"
-                android:padding="10dp"
-                android:hint="9700363455"
                 android:layout_marginLeft="10dp"
-                />
+                android:background="@drawable/round"
+                android:hint="9700363455"
+                android:padding="10dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:orientation="horizontal"
-            >
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address : "
                 android:layout_marginLeft="25dp"
+                android:text="Address : "
                 android:textSize="15dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/Address1"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round"
-                android:padding="10dp"
-                android:hint="Jaya nagar,4th block"
                 android:layout_marginLeft="10dp"
-                />
+                android:background="@drawable/round"
+                android:hint="Jaya nagar,4th block"
+                android:padding="10dp" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
+
             <Button
                 android:id="@+id/updateprofile"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="#D2691E"
-                android:text="Update profile" />
+                android:text="Update profile"
+                android:layout_marginBottom="8dp"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-public class View_routedetails  extends Fragment {
+public class View_routedetails extends Fragment {
 
     RecyclerView recyclerView;
     String[] arr1 = {"100", "80", "45", "$50"};
@@ -23,20 +23,20 @@ public class View_routedetails  extends Fragment {
     String[] arr3 = {"jayanagar", "majestic", "jayanagar", "kormangala"};
     String[] arr4 = {"$100", "$80", "$45", "$50", "$80"};
     String[] arr5 = {"kormangala", "jayanagar", "majestic", "jayanagar"};
-    ArrayAdapter <String> adapter;
+    ArrayAdapter<String> adapter;
     Recycler_viewroute recycler;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate( R.layout.activity_view_routedetails, container, false );
-        RecyclerView recyclerView1 = view.findViewById( R.id.recycler3 );
-        recyclerView1.setLayoutManager( new LinearLayoutManager( getActivity()));
-        Recycler_viewroute recyclerAdapter = new Recycler_viewroute( getActivity(), arr1, arr2, arr3, arr4, arr5 );
-        recyclerView1.setAdapter( recyclerAdapter );
-        TextView addroute=view.findViewById(R.id.addroute);
-        addroute.setOnClickListener(new View.OnClickListener(){
+        View view = inflater.inflate(R.layout.activity_view_routedetails, container, false);
+        RecyclerView recyclerView1 = view.findViewById(R.id.recycler3);
+        recyclerView1.setLayoutManager(new LinearLayoutManager(getActivity()));
+        Recycler_viewroute recyclerAdapter = new Recycler_viewroute(getActivity(), arr1, arr2, arr3, arr4, arr5);
+        recyclerView1.setAdapter(recyclerAdapter);
+        TextView addroute = view.findViewById(R.id.addroute);
+        addroute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getActivity(),Addroute.class);
+                Intent i = new Intent(getActivity(), Addroute.class);
                 startActivity(i);
             }
         });

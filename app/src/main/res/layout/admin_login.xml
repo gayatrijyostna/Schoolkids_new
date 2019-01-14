@@ -24,34 +24,34 @@
             android:layout_height="5dp"
             android:layout_marginTop="10dp"
             android:alpha="0.3"
-            android:background="@drawable/gradient"></View>
+            android:background="@drawable/gradient" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:text="Your Username"
             android:textSize="17dp" />
 
 
-            <EditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/round"
-                android:hint="Enter your username"
-                android:padding="20dp"></EditText>
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round"
+            android:hint="Enter your username"
+            android:padding="20dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:text="Your Password"
-            android:layout_marginLeft="10dp"
             android:textSize="17dp" />
 
         <EditText
@@ -59,45 +59,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/round"
             android:hint="Enter your Password"
-            android:padding="20dp"></EditText>
+            android:padding="20dp" />
 
-<CheckBox
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
-    android:layout_marginLeft="20dp"
-    android:text="Keep me logged in"
-    android:textSize="15dp"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Keep me logged in"
+            android:textSize="15dp" />
     </LinearLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-  >
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="43dp"
-        android:gravity="center"
-        android:paddingLeft="20dp"
-        android:background="#0000cd"
-        android:alpha="0.5"
-        android:paddingRight="20dp"
-        android:text="LOGIN"
-        android:textColor="#ffffff"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="43dp"
+            android:alpha="0.5"
+            android:background="#0000cd"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="LOGIN"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/signup_here"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Not a member?SignUp here"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="Not a member?SignUp here" />
 </LinearLayout>
