@@ -4,17 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bus"
-    android:alpha="0.5"
-    tools:context=".Edit"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Edit">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+<Button
+    android:layout_width="50dp"
+    android:id="@+id/back"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_arrow_back_black_24dp"/>
         <TextView
             android:id="@+id/adminpage"
             android:layout_width="match_parent"
@@ -24,44 +29,38 @@
             android:text="UPDATE ROUTE DETAILS"
             android:textColor="#2e348b"
             android:textSize="25dp"
-            android:textStyle="italic" />
-
+            android:textStyle="normal" />
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="5dp"
+            android:layout_height="2dp"
             android:layout_marginTop="20dp"
             android:alpha="0.3"
-            android:background="@drawable/gradient"></View>
+            android:background="@drawable/gradient" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginLeft="10dp"
-        >
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:layout_weight="1"
             android:text="Bus Route No "
-            android:textSize="17dp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="40dp"
-            android:paddingLeft="30dp"
-            android:text=":"
-            android:textSize="17dp" />
 
         <EditText
+            android:id="@+id/Bus_Route_No"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
+            android:layout_weight="1"
             android:background="@drawable/round" />
 
 
@@ -70,105 +69,106 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp">
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Route Name "
-            android:textSize="17dp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:paddingLeft="30dp"
-            android:text=":"
-            android:textSize="17dp"
-            android:textColor="#000000"/>
 
         <EditText
+            android:id="@+id/Route_Name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
             android:background="@drawable/round" />
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
 
         >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Route From "
-            android:textSize="17dp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:paddingLeft="30dp"
-            android:text=":"
-            android:textSize="17dp" />
 
         <EditText
+            android:id="@+id/Route_From"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
+            android:layout_weight="1"
             android:background="@drawable/round" />
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        >
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Route To "
-            android:textSize="17dp"
-            android:textColor="#000000"/>
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:paddingLeft="40dp"
-            android:text=":"
-            android:textSize="17dp" />
 
         <EditText
-            android:layout_width="220dp"
+            android:id="@+id/Route_To"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
             android:background="@drawable/round" />
 
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
         <Button
-            android:id="@+id/AddRoute"
+            android:id="@+id/Update"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="18dp"
             android:background="#D2691E"
             android:text="UPDATE" />
+
+        <Button
+            android:id="@+id/Delete"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="18dp"
+            android:background="#D2691E"
+            android:text="delete" />
     </LinearLayout>
 </LinearLayout>
 

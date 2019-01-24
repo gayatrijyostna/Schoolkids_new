@@ -44,7 +44,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/round"
             android:hint="Enter your username"
-            android:padding="20dp" />
+            android:padding="12dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/round"
             android:hint="Enter your Password"
-            android:padding="20dp" />
+            android:padding="12dp" />
 
         <CheckBox
             android:layout_width="match_parent"
@@ -82,9 +82,9 @@
             android:id="@+id/login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="43dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
             android:alpha="0.5"
             android:background="#0000cd"
             android:gravity="center"
@@ -100,5 +100,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Not a member?SignUp here" />
+        android:text="Not a member? SignUp here"
+        android:layout_marginLeft="10dp"/>
 </LinearLayout>

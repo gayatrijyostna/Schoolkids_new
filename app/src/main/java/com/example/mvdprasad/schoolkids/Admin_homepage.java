@@ -14,15 +14,14 @@ public class Admin_homepage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.admin_homepage );
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.admin_homepage);
 
-
-        TextView adminpage=findViewById(R.id.adminpage);
-        adminpage.setOnClickListener(new View.OnClickListener(){
+        TextView adminpage = findViewById(R.id.adminpage);
+        adminpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(Admin_homepage.this,Navigation_drawer.class);
+                Intent i = new Intent(Admin_homepage.this, Navigation_drawer.class);
                 startActivity(i);
             }
         });

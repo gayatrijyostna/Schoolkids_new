@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".View_routedetails">
-
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,7 +13,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="VIEW ROUTE DETAILS"
+            android:text="VIEW STUDENT DETAILS"
             android:textColor="#2E8B57"
             android:textSize="25dp"
             android:textStyle="italic" />
@@ -27,7 +23,7 @@
             android:layout_height="5dp"
             android:layout_marginTop="20dp"
             android:alpha="0.3"
-            android:background="@drawable/gradient"/>
+            android:background="@drawable/gradient"></View>
     </LinearLayout>
 
 
@@ -38,12 +34,12 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/addroute"
+            android:id="@+id/addroute1"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/oval"
-            android:text="Add Route" />
+            android:text="Add" />
 
         <Button
             android:visibility="gone"
@@ -91,38 +87,11 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="50dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="15dp"
-                    android:text="Bus No"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Route Name"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Route From"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:text="Route To"
+                    android:text="Roll No"
                     android:textSize="15dp"
                     android:textStyle="bold" />
 
@@ -131,15 +100,91 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="15dp"
-                    android:text="Bus pwd"
+                    android:text="NAME"
                     android:textSize="15dp"
                     android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="DOB"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="FatherName"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cellno1"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="MotherName"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="BusNo"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:text="Address"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Seletionof class"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Gender"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Cell no"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+
             </LinearLayout>
 
+
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler3"
+                android:id="@+id/recycler5"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
         </LinearLayout>
     </HorizontalScrollView>
 </LinearLayout>

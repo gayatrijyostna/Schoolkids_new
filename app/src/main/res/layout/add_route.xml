@@ -36,16 +36,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="40dp"
             android:text="Bus Route No "
             android:textSize="17dp" />
 
-
-
         <EditText
+            android:id="@+id/Bus_Route_No"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="40dp"
@@ -63,7 +62,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:text="Route Name "
             android:layout_weight="1"
@@ -72,6 +71,7 @@
 
 
         <EditText
+            android:id="@+id/Route_Name"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -88,7 +88,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Route From "
@@ -96,6 +96,7 @@
 
 
         <EditText
+            android:id="@+id/Route_From"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
@@ -112,15 +113,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:text="Route To "
             android:layout_weight="1"
+
             android:textSize="17dp" />
 
 
 
         <EditText
+            android:id="@+id/Route_To"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"

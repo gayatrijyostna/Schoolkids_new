@@ -68,10 +68,19 @@ public class Navigation_drawer extends AppCompatActivity
         if (id == R.id.nav_Studentimage) {
             // Handle the camera action
         } else if (id == R.id.nav_Profile) {
-            startActivity(new Intent(Navigation_drawer.this, Investigator_profile.class));
+            Investigator_profile ip= new Investigator_profile();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.frame, ip);
+            ft.commit();
+//            startActivity(new Intent(Navigation_drawer.this, Investigator_profile.class));
 
         } else if (id == R.id.Student_list) {
-
+            Student_details sd = new Student_details();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.frame, sd);
+            ft.commit();
         } else if (id == R.id.Route_details) {
             View_routedetails f3 = new View_routedetails();
             FragmentManager fm = getSupportFragmentManager();
@@ -93,7 +102,7 @@ public class Navigation_drawer extends AppCompatActivity
         } else if (id == R.id.change_password) {
 
         } else if (id == R.id.signout) {
-
+                startActivity(new Intent(Navigation_drawer.this,Admin_page.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

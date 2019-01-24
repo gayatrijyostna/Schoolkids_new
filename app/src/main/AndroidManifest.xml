@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mvdprasad.schoolkids">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,28 +12,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Admin_page">
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Admin_page"></activity>
         <activity android:name=".Admin_homepage" />
         <activity android:name=".Signup" />
         <activity
             android:name=".Navigation_drawer"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Investigator_profile" />
-        <activity android:name=".Update_investigator_profile" />
-        <activity android:name=".Addroute" />
+        <activity android:name=".Add_student_details" />
         <activity android:name=".Edit" />
         <activity android:name=".Busposition_activity" />
-        <activity android:name=".Route_landmarks" />
-        <activity android:name=".Recycler_landmark" />
         <activity android:name=".viewlandmark" />
-        <activity android:name=".Add_landmark"></activity>
+        <activity android:name=".Add_landmark" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD1zzjom4rg_B85LRSt4jwCsK4UziBhdZQ" />
+
+        <activity android:name=".update_student_details"></activity>
     </application>
 
 </manifest>

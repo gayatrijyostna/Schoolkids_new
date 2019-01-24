@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-   android:layout_marginTop="8dp">
+    android:layout_marginTop="8dp">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +16,7 @@
             android:background="@drawable/round"
             android:hint="NAME"
             android:textColorHint="#000000"
-            android:padding="15dp"
+            android:padding="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
@@ -27,13 +28,13 @@
             android:background="@drawable/round"
             android:hint="Username"
             android:textColorHint="#000000"
-            android:padding="15dp"
+            android:padding="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
 
-           />
+            />
         <EditText
             android:id="@+id/mail"
             android:layout_width="match_parent"
@@ -41,7 +42,8 @@
             android:background="@drawable/round"
             android:hint="Email"
             android:textColorHint="#000000"
-            android:padding="15dp"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
@@ -54,8 +56,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round"
             android:hint="Password"
+            android:inputType="textPassword"
             android:textColorHint="#000000"
-            android:padding="15dp"
+            android:padding="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
@@ -67,8 +70,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/round"
             android:hint="Address"
+            android:maxLines="4"
             android:textColorHint="#000000"
-            android:padding="15dp"
+            android:padding="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
@@ -82,22 +86,52 @@
             android:background="@drawable/round"
             android:hint="Phone number"
             android:textColorHint="#000000"
-            android:padding="15dp"
+            android:inputType="phone"
+            android:padding="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gender"
+                android:textSize="20dp"/>
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@id/email"
+                android:orientation="horizontal">
 
+                <RadioButton
+                    android:id="@+id/male1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="male" />
+
+                <RadioButton
+                    android:id="@+id/female1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="female" />
+            </RadioGroup>
+        </LinearLayout>
         <Button
             android:id="@+id/signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:padding="15dp"
+            android:padding="10dp"
             android:background="#6B8E23"
             android:text="SIGN UP"
             android:textColorHint="#000000"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             />
         <TextView
             android:layout_width="match_parent"
@@ -108,7 +142,5 @@
             />
 
     </LinearLayout>
-
-
 
 </LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Recycler_viewroute"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:id="@+id/rollno"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="100"
+            android:textSize="15dp"
+            />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Jyostna"
+            android:textSize="10dp"
+            />
+        <TextView
+            android:id="@+id/dob"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="25/06/97"
+            android:textSize="10dp"/>
+        <TextView
+            android:id="@+id/fathername"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="ravi"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/mothername"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="uma"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/busno"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="127"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/adress"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Hyderabad"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/Class"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:text="A"
+            android:textSize="10dp"
+            />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Female"
+            android:textSize="10dp"
+            />
+
+        <TextView
+            android:id="@+id/cell_no"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="9989864511"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+        />
+    </LinearLayout>
+</HorizontalScrollView>

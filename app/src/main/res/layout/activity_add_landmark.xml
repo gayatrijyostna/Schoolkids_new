@@ -37,18 +37,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="Land Mark "
-            android:layout_weight="1"
             android:textColor="#000000"
-            android:textSize="17dp" />
+            android:textSize="16sp" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/edit_landmark2"
+            android:layout_width="150dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
             android:layout_marginTop="40dp"
             android:background="@drawable/round" />
 
@@ -63,18 +62,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Latitude "
-            android:layout_weight="1"
             android:textColor="#000000"
-            android:textSize="17dp" />
+            android:textSize="16sp" />
 
 
 
         <EditText
-            android:layout_weight="1"
-            android:layout_width="match_parent"
+            android:id="@+id/edit_latitude"
+            android:layout_width="150dp"
             android:layout_height="40dp"
             android:background="@drawable/round" />
 
@@ -89,22 +87,26 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Longitude "
             android:textColor="#000000"
-            android:layout_weight="1"
-            android:textSize="17dp" />
+            android:textSize="16sp" />
 
 
 
         <EditText
-            android:layout_width="match_parent"
+            android:id="@+id/edit_longitude"
+            android:layout_width="150dp"
             android:layout_height="40dp"
-            android:layout_weight="1"
             android:background="@drawable/round" />
 
-
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/map"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/map"/>
     </LinearLayout>
 
     <LinearLayout
@@ -115,16 +117,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:text="Message "
             android:textColor="#000000"
             android:layout_weight="1"
-            android:textSize="17dp" />
+            android:textSize="16sp" />
 
 
 
         <EditText
+            android:id="@+id/add_Message"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"

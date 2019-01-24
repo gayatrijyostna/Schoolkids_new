@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen">
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pour_wisky"
+        android:fitsSystemWindows="true"
+        android:scaleType="fitXY"/>
+</android.support.constraint.ConstraintLayout>-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#70efec"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/emblem"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:alpha="0.8"
+        android:visibility="visible"
+        android:src="@drawable/splash_bg"/>
+
+
+    <!-- <com.hanks.htextview.scale.ScaleTextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="this is init sentence"
+         android:textSize="16sp"
+         android:layout_alignParentBottom="true"
+         android:gravity="center"
+         android:id="@+id/scaletextview"
+         android:layout_marginBottom="30dp"/>-->
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_call"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_splash"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:text="9581000780"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </LinearLayout>
+</RelativeLayout>
