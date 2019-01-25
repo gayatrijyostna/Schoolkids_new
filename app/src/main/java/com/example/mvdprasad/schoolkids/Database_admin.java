@@ -163,17 +163,23 @@ public class Database_admin extends SQLiteOpenHelper {
         return data;
     }
 
-    public boolean updateData(String name,String username,String email,String password,String gender,String phone,String address) {
+    public boolean updateData(String name,String username,String email,String gender,String phone,String address) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
         contentValues.put(NAME,name);
         contentValues.put(USERNAME,username);
         contentValues.put(EMAIL,email);
-        contentValues.put(PASSWORD,password);
         contentValues.put(ADDRESS,address);
         contentValues.put(PHONE,phone);
         contentValues.put(GENDER,gender);
+        db.update(TABLE_NAME, contentValues, "NAME = ?",new String[] { name });
+        return true;
+    }
+    public boolean insertPassword(String name,String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(PASSWORD,password);
         db.update(TABLE_NAME, contentValues, "NAME = ?",new String[] { name });
         return true;
     }

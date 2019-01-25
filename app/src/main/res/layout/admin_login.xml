@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
@@ -42,7 +43,6 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/round"
             android:hint="Enter your username"
             android:padding="12dp" />
 
@@ -54,16 +54,23 @@
             android:text="Your Password"
             android:textSize="17dp" />
 
-        <EditText
+        <android.support.design.widget.TextInputLayout
             android:id="@+id/pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/round"
             android:hint="Enter your Password"
-            android:padding="12dp" />
+            app:passwordToggleTint="@color/colorPrimaryDark"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleDrawable="@drawable/toggle">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:id="@+id/pswd"/>
+        </android.support.design.widget.TextInputLayout>
 
         <CheckBox
             android:layout_width="match_parent"

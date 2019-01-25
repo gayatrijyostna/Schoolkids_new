@@ -31,7 +31,7 @@
         <activity android:name=".Add_student_details" />
         <activity android:name=".Edit" />
         <activity android:name=".Busposition_activity" />
-        <activity android:name=".viewlandmark" />
+        <activity android:name=".Viewlandmark" />
         <activity android:name=".Add_landmark" />
 
         <meta-data
@@ -41,7 +41,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyD1zzjom4rg_B85LRSt4jwCsK4UziBhdZQ" />
 
-        <activity android:name=".update_student_details"></activity>
+        <activity android:name=".Update_student_details"></activity>
     </application>
 
 </manifest>

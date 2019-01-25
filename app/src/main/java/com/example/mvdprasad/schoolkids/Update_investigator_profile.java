@@ -30,7 +30,7 @@ import java.util.Map;
 
 public class Update_investigator_profile extends Fragment {
     RadioGroup radioGroup;
-    EditText username, name, email, password,phone,Address;
+    EditText username, name, email,phone,Address;
     Button updateprofile;
     RadioButton male,female;
     public static final String MyPREFERENCES = "MyPrefs" ;
@@ -41,7 +41,6 @@ public class Update_investigator_profile extends Fragment {
         name=view.findViewById(R.id.edit_name);
         username=view.findViewById(R.id.edit_username);
         email=view.findViewById(R.id.email);
-        password=view.findViewById(R.id.edit_password1);
         radioGroup=view.findViewById(R.id.radioGroup);
         phone=view.findViewById(R.id.phone);
         Address=view.findViewById(R.id.Address);
@@ -56,7 +55,6 @@ public class Update_investigator_profile extends Fragment {
         name.setText(data.get(0).get(Database_admin.NAME));
         username.setText(data.get(0).get(Database_admin.USERNAME));
         email.setText(data.get(0).get(Database_admin.EMAIL));
-        password.setText(data.get(0).get(Database_admin.PASSWORD));
        String gender_str= data.get(0).get(Database_admin.GENDER);
       if(gender_str.equals("male"))
       {
@@ -77,8 +75,6 @@ public class Update_investigator_profile extends Fragment {
         String name_str = name.getText().toString().trim();
         String username_str = username.getText().toString().trim();
         String email_str = email.getText().toString().trim();
-        String password_str = password.getText().toString().trim();
-
         int selectedId =radioGroup.getCheckedRadioButtonId();
        RadioButton selectedRadioButton = (RadioButton)view.findViewById(selectedId);
         String radioButtonText = selectedRadioButton.getText().toString();
@@ -86,7 +82,7 @@ public class Update_investigator_profile extends Fragment {
         String phone_str = phone.getText().toString().trim();
         String Address_str = Address.getText().toString().trim();
 
-        boolean isUpdate = db.updateData(name_str,username_str,email_str,password_str,radioButtonText,phone_str,Address_str);
+        boolean isUpdate = db.updateData(name_str,username_str,email_str,radioButtonText,phone_str,Address_str);
         if(isUpdate == true)
         {
             Toast.makeText(getActivity(), "profile Updated Succesfully", Toast.LENGTH_LONG ).show();

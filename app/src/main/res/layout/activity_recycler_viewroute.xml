@@ -34,12 +34,12 @@
 
         <TextView
             android:id="@+id/routenme"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="10dp"
             android:text="Jayanagar 9th block to majestic"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/routefrom"
@@ -49,7 +49,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="Jayanagar"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/routeto"
@@ -59,7 +59,7 @@
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="majestic"
-            android:textSize="10dp" />
+            android:textSize="15dp" />
 
 
 

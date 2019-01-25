@@ -56,7 +56,7 @@ this.data=data;
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked){
-                    Intent intent=new Intent(context,update_student_details.class);
+                    Intent intent=new Intent(context,Update_student_details.class);
                     intent.putExtra("ROLL_NO",data.get(i).get(Database_admin.ROLL_NO));
                     intent.putExtra("ADDRESS1",data.get(i).get(Database_admin.ADDRESS1));
                     intent.putExtra("BUS_NO",data.get(i).get(Database_admin.BUS_NO));

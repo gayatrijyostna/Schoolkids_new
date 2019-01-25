@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class update_student_details extends AppCompatActivity implements View.OnClickListener{
+public class Update_student_details extends AppCompatActivity implements View.OnClickListener{
     EditText Rollno,Name,Cell_no,Adress,Section_of_class,Father_name,Mother_name,Passwrd;
     RadioGroup radioGroup;
     RadioButton Gender;
@@ -50,7 +50,7 @@ public class update_student_details extends AppCompatActivity implements View.On
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(update_student_details.this,Navigation_drawer.class));
+                startActivity(new Intent(Update_student_details.this,Navigation_drawer.class));
             }
         });
         Rollno.setText(getIntent().getStringExtra("ROLL_NO"));
@@ -85,10 +85,10 @@ public class update_student_details extends AppCompatActivity implements View.On
                 if(isUpdate == true)
                 {
 
-                    Toast.makeText(update_student_details.this,"updated",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Update_student_details.this,"updated",Toast.LENGTH_LONG).show();
                 }
                 else {
-                    Toast.makeText(update_student_details.this, "Profile Not Updated", Toast.LENGTH_LONG ).show();
+                    Toast.makeText(Update_student_details.this, "Profile Not Updated", Toast.LENGTH_LONG ).show();
 
                 }
             }
@@ -98,9 +98,9 @@ public class update_student_details extends AppCompatActivity implements View.On
             public void onClick(View v) {
                 Integer deletedRows = db.deleteStudent(Rollno.getText().toString());
                 if(deletedRows > 0)
-                    Toast.makeText(update_student_details.this,"Data Deleted",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Update_student_details.this,"Data Deleted",Toast.LENGTH_LONG).show();
                 else
-                    Toast.makeText(update_student_details.this,"Data not Deleted",Toast.LENGTH_LONG).show();
+                    Toast.makeText(Update_student_details.this,"Data not Deleted",Toast.LENGTH_LONG).show();
             }
         });
 

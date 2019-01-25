@@ -3,16 +3,11 @@ package com.example.mvdprasad.schoolkids;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.DatePicker;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -54,7 +49,7 @@ public class Recycler_landmark extends RecyclerView.Adapter<Recycler_landmark.Vi
         viewHolderClass.viewlandmark.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(context,viewlandmark.class);
+                Intent intent=new Intent(context,Viewlandmark.class);
                 intent.putExtra("BUSNO",data3.get(i).get(Database_admin.BUSROUTENO));
                 context.startActivity(intent);
             }

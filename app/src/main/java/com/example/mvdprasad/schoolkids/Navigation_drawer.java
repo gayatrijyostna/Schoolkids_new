@@ -100,7 +100,11 @@ public class Navigation_drawer extends AppCompatActivity
             startActivity(new Intent(Navigation_drawer.this, Busposition_activity.class));
 
         } else if (id == R.id.change_password) {
-
+           ChangePassword cp= new ChangePassword();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.frame, cp);
+            ft.commit();
         } else if (id == R.id.signout) {
                 startActivity(new Intent(Navigation_drawer.this,Admin_page.class));
         }

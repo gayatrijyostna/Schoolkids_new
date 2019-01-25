@@ -13,6 +13,9 @@ import android.widget.Toast;
 public class Signup extends AppCompatActivity {
     private Database_admin dataBaseClass;
     boolean value = false;
+    public static final String MOBILE_PATTERN = "^[6789]\\d{9}$";
+    public static final String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    public static final String NAME_PATTERN = "[a-zA-Z., ]+([ '-][a-zA-Z., ]+)*";
     String name, username, email, password, address, phonenumber;
 
     @Override
@@ -39,17 +42,41 @@ public class Signup extends AppCompatActivity {
                 String address_str = address.getText().toString().trim();
                 String phone_str = phonenumber.getText().toString().trim();
 
-                if (!email_str.equals("") && !password_str.equals("")&& !radioGroup.isClickable()) {
+                if (!email_str.equals("") && !password_str.equals("")&& !name_str.equals("")&& !username_str.equals("") && !address_str.equals("") && !phone_str.equals("")  && !radioGroup.isClickable()) {
+                    if (!name_str.matches(NAME_PATTERN ) || !(name_str.length()>3) || !(name_str.length()<30) ) {
+                        value = false;
+                        email.setError("username invalid");
+                    }
+                  if (!username_str.matches(NAME_PATTERN ) || !(name_str.length()>3) || !(name_str.length()<30) ) {
+                        value = false;
+                        email.setError("Email invalid");
+                    }
+                    if (!email_str.matches(EMAIL_PATTERN) ) {
+                        value = false;
+                        email.setError("Email invalid");
+                    }
+                    if (!password_str.matches(NAME_PATTERN) || !(password_str.length()>3) || !(password_str.length()<8) ) {
+                        value = false;
+                        email.setError("Email invalid");
+                    }
+                    if (!address_str.matches(NAME_PATTERN ) ) {
+                        value = false;
+                        email.setError("Email invalid");
+                    }
+                    if (!phone_str.matches(MOBILE_PATTERN) || !(phone_str.length()==10) ) {
+                        value = false;
+                        email.setError("Email invalid");
+                    }
+                   if( value = true) {
+                       int selectedId = radioGroup.getCheckedRadioButtonId();
+                       RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
+                       String radioButtonText = selectedRadioButton.getText().toString();
 
-                    value = true;
-                    int selectedId = radioGroup.getCheckedRadioButtonId();
-                    RadioButton selectedRadioButton = (RadioButton)findViewById(selectedId);
-                    String radioButtonText = selectedRadioButton.getText().toString();
-
-                    dataBaseClass.insertValues(name_str, username_str, email_str, password_str, address_str, phone_str,radioButtonText);
-                    Intent i = new Intent(Signup.this, Admin_page.class);
-                    startActivity(i);
-                    Toast.makeText(Signup.this, "successfully saved", Toast.LENGTH_SHORT).show();
+                       dataBaseClass.insertValues(name_str, username_str, email_str, password_str, address_str, phone_str, radioButtonText);
+                       Intent i = new Intent(Signup.this, Admin_page.class);
+                       startActivity(i);
+                       Toast.makeText(Signup.this, "successfully saved", Toast.LENGTH_SHORT).show();
+                   }
                 } else {
                     Toast.makeText(Signup.this, "Plz fill the details", Toast.LENGTH_SHORT).show();
 

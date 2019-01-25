@@ -23,7 +23,7 @@ import java.util.Map;
 public class Investigator_profile extends Fragment {
     public static final String MyPREFERENCES = "MyPrefs" ;
     Database_admin db;
-    TextView edit_name,edit_username,email,password,address,phone,gender;
+    TextView edit_name,edit_username,email,address,phone,gender;
     ArrayList<Map<String, String>> data;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_investigator_profile, container, false);
@@ -36,7 +36,6 @@ public class Investigator_profile extends Fragment {
         edit_name = view.findViewById(R.id.edit_name);
         edit_username = view.findViewById(R.id.edit_username);
         email = view.findViewById(R.id.email);
-        password = view.findViewById(R.id.edit_password);
         gender = view.findViewById(R.id.edit_gender);
         phone = view.findViewById(R.id.phone);
         address = view.findViewById(R.id.Address);
@@ -44,7 +43,6 @@ public class Investigator_profile extends Fragment {
         edit_name.setText(data.get(0).get(Database_admin.NAME));
         edit_username.setText(data.get(0).get(Database_admin.USERNAME));
         email.setText(data.get(0).get(Database_admin.EMAIL));
-        password.setText(data.get(0).get(Database_admin.PASSWORD));
         gender.setText(data.get(0).get(Database_admin.GENDER));
         phone.setText(data.get(0).get(Database_admin.PHONE));
         address.setText(data.get(0).get(Database_admin.ADDRESS));

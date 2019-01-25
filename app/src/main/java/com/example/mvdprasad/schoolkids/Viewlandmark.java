@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class viewlandmark extends FragmentActivity implements OnMapReadyCallback {
+public class Viewlandmark extends FragmentActivity implements OnMapReadyCallback {
     private MapFragment fragment;
     private GoogleMap googleMap;
     private double markerLat;
