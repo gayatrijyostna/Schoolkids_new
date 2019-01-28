@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class Database_admin extends SQLiteOpenHelper {
     ArrayList<Map<String, String>> data,student_data;
+    ArrayList<String> data1;
     public static final String DB_NAME = "student";
     public static final String TABLE_NAME = "table_name";
     public static final String NAME = "name";
@@ -214,6 +215,25 @@ public class Database_admin extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
         return data;
+    }
+    public ArrayList<String> getBusName() {
+        data1 = new ArrayList();
+
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME1  , null);
+
+        if (cursor.moveToFirst()) {
+
+            do {
+
+              cursor.getString(cursor.getColumnIndex(ROUTENAME));
+
+                data1.add(cursor.getString(cursor.getColumnIndex(ROUTENAME)));
+
+            } while (cursor.moveToNext());
+        }
+        return data1;
     }
     public boolean updateRoute(String Route_no_str,String Route_NAME_str,String Route_From_str,String Route_To_str) {
         SQLiteDatabase db = this.getWritableDatabase();

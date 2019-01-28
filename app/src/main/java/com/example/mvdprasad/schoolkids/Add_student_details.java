@@ -7,26 +7,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.Map;
 
 public class Add_student_details  extends AppCompatActivity implements View.OnClickListener {
-    EditText Rollno,Name,Cell_no,Adress,Section_of_class,Father_name,Mother_name,Passwrd,Gender;
+    EditText Rollno,Name,Cell_no,Adress,Section_of_class,Father_name,Mother_name,Passwrd;
+    RadioGroup edit_gender;
     Spinner Bus_no;
     Button Add;
     Calendar myCalendar;
     private EditText Birthday;
     Database_admin db;
     DatePickerDialog.OnDateSetListener from_dateListener;
-
+ArrayList<String> data=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -41,9 +47,12 @@ public class Add_student_details  extends AppCompatActivity implements View.OnCl
         Father_name=findViewById( R.id.edit_fathername );
         Mother_name=findViewById( R.id.edit_mothernme );
         Passwrd=findViewById( R.id.edit_passwrd );
-        Gender=findViewById( R.id.edit_gender );
+        edit_gender=findViewById( R.id.edit_gender );
         Add=findViewById( R.id.add );
         db=new Database_admin(this);
+        data = db.getBusName();
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, data);
+        Bus_no.setAdapter(dataAdapter);
         myCalendar = Calendar.getInstance();
         Birthday.setOnClickListener(this);
         from_dateListener = new DatePickerDialog.OnDateSetListener() {
@@ -76,7 +85,7 @@ public class Add_student_details  extends AppCompatActivity implements View.OnCl
                 String Father_name_str=Father_name.getText().toString();
                 String Mother_name_str=Mother_name.getText().toString();
                 String Passwrd_str=Passwrd.getText().toString();
-                String Gender_str=Gender.getText().toString();
+
 
                 if(!Rollno_str.equals( "" ) &&
                         !Birthday.getText().toString().equals( "" ) &&
@@ -88,9 +97,12 @@ public class Add_student_details  extends AppCompatActivity implements View.OnCl
                         !Father_name.getText().toString().equals( "" ) &&
                         !Mother_name.getText().toString().equals( "" ) &&
                         !Passwrd.getText().toString().equals( "" ) &&
-                        !Gender.getText().toString().equals( "" ) )
+                          !edit_gender.isClickable() )
                 {
-                    db.insert_studentdetails(Rollno_str, Birthday_str, Name_str, Cell_no_str, Bus_no_str, Adress_str,Section_of_class_str,Father_name_str,Mother_name_str,Passwrd_str,Gender_str);
+                    int selectedId = edit_gender.getCheckedRadioButtonId();
+                    RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
+                    String radioButtonText = selectedRadioButton.getText().toString();
+                    db.insert_studentdetails(Rollno_str, Birthday_str, Name_str, Cell_no_str, Bus_no_str, Adress_str,Section_of_class_str,Father_name_str,Mother_name_str,Passwrd_str,radioButtonText);
                     Intent i = new Intent(Add_student_details.this, Admin_page.class);
                     startActivity(i);
                     Toast.makeText(Add_student_details.this, "successfully saved", Toast.LENGTH_SHORT).show();
@@ -133,9 +145,7 @@ public class Add_student_details  extends AppCompatActivity implements View.OnCl
         if (isEmpty( Section_of_class)){
             Section_of_class.setError( "This field is required!" );
         }
-        if (isEmpty( Gender)){
-            Gender.setError( "This field is required!" );
-        }
+
         if (isEmpty( Father_name)){
             Father_name.setError( "This field is required!" );
         }

@@ -68,7 +68,7 @@ public class Recycler_landmark extends RecyclerView.Adapter<Recycler_landmark.Vi
         TextView txtview1;
         TextView txtview2;
         TextView txtview3;
-        Button viewlandmark,Addlandmark;
+        TextView viewlandmark,Addlandmark;
 
         public ViewHolderClass(@NonNull View itemView) {
             super( itemView );

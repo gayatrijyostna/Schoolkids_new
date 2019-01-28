@@ -24,7 +24,7 @@ public class Addroute extends Fragment {
         Bus_Route_No=view.findViewById(R.id.Bus_Route_No);
         Route_Name=view.findViewById(R.id.Route_Name);
         Route_From=view.findViewById(R.id.Route_From);
-        Route_To=view.findViewById(R.id.Route_From);
+        Route_To=view.findViewById(R.id.Route_To);
         AddRoute=view.findViewById(R.id.AddRoute);
         AddRoute.setOnClickListener(new View.OnClickListener() {
             @Override

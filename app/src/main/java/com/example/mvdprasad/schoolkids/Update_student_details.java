@@ -20,7 +20,7 @@ import java.util.Locale;
 public class Update_student_details extends AppCompatActivity implements View.OnClickListener{
     EditText Rollno,Name,Cell_no,Adress,Section_of_class,Father_name,Mother_name,Passwrd;
     RadioGroup radioGroup;
-    RadioButton Gender;
+    RadioButton Gender1,gender2;
     Spinner Bus_no;
     Button update,delete,back;
     Calendar myCalendar;
@@ -42,8 +42,8 @@ public class Update_student_details extends AppCompatActivity implements View.On
         Section_of_class=findViewById( R.id.edit_soc1 );
         Father_name=findViewById( R.id.edit_fathername1 );
         Mother_name=findViewById( R.id.edit_mothernme1);
-
-        Gender=findViewById( R.id.edit_gender1 );
+        Gender1=findViewById( R.id.edit_gender1 );
+       gender2=findViewById( R.id.edit_gender2 );
         update=findViewById(R.id.update1);
         delete=findViewById(R.id.delete);
         back=findViewById(R.id.back);
@@ -58,11 +58,19 @@ public class Update_student_details extends AppCompatActivity implements View.On
         Name.setText(getIntent().getStringExtra("NAME1"));
         Cell_no.setText(getIntent().getStringExtra("CELL_NO"));
       //  Bus_no.setSelected(getIntent().getStringExtra("ROLL_NO"));
+
         Adress.setText(getIntent().getStringExtra("ADDRESS1"));
         Section_of_class.setText(getIntent().getStringExtra("SECTION_OF_CLASS"));
         Father_name.setText(getIntent().getStringExtra("FATHER_NAME"));
         Mother_name.setText(getIntent().getStringExtra("MOTHERNAME"));
-        Gender.setText(getIntent().getStringExtra("GENDER1"));
+        if(getIntent().getStringExtra("GENDER!")=="MALE")
+        {
+            Gender1.setChecked(true);
+        }
+        else
+        {
+            gender2.setChecked(true);
+        }
         db=new Database_admin(this);
         myCalendar = Calendar.getInstance();
         Birthday.setOnClickListener(this);
@@ -79,9 +87,10 @@ public class Update_student_details extends AppCompatActivity implements View.On
                 String Father_name_str=Father_name.getText().toString().trim();
                 String Mother_name_str=Mother_name.getText().toString().trim();
 
-                String Gender_str=Gender.getText().toString().trim();
-
-                boolean isUpdate = db.updateStudent(Rollno_str,Name_str,Birthday_str,Father_name_str,Bus_no_str,Cell_no_str,Adress_str,Section_of_class_str,Mother_name_str,Gender_str);
+                int selectedId = radioGroup.getCheckedRadioButtonId();
+                RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
+                String radioButtonText = selectedRadioButton.getText().toString();
+                boolean isUpdate = db.updateStudent(Rollno_str,Name_str,Birthday_str,Father_name_str,Bus_no_str,Cell_no_str,Adress_str,Section_of_class_str,Mother_name_str,radioButtonText);
                 if(isUpdate == true)
                 {
 
