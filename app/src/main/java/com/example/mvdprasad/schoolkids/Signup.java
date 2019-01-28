@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class Signup extends AppCompatActivity {
     private Database_admin dataBaseClass;
-    boolean value = false;
+
     public static final String MOBILE_PATTERN = "^[6789]\\d{9}$";
     public static final String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     public static final String NAME_PATTERN = "[a-zA-Z., ]+([ '-][a-zA-Z., ]+)*";
@@ -41,33 +41,34 @@ public class Signup extends AppCompatActivity {
                 String password_str = password.getText().toString().trim();
                 String address_str = address.getText().toString().trim();
                 String phone_str = phonenumber.getText().toString().trim();
-
-                if (!email_str.equals("") && !password_str.equals("")&& !name_str.equals("")&& !username_str.equals("") && !address_str.equals("") && !phone_str.equals("")  && !radioGroup.isClickable()) {
-                    if (!name_str.matches(NAME_PATTERN ) || !(name_str.length()>3) || !(name_str.length()<30) ) {
+                    boolean value = true;
+                if (!email_str.equals("") && !password_str.equals("")&& !name_str.equals("")&& !username_str.equals("") && !address_str.equals("") && !phone_str.equals("")  && !radioGroup.isClickable())
+                {
+                    if (!(name_str.matches(NAME_PATTERN )) || (name_str.length()<3) || (name_str.length()>30) ) {
                         value = false;
-                        email.setError("username invalid");
+                        name.setError("username invalid");
                     }
-                  if (!username_str.matches(NAME_PATTERN ) || !(name_str.length()>3) || !(name_str.length()<30) ) {
+                 if(!username_str.matches(NAME_PATTERN ) || (username_str.length()<3) || (username_str.length()>30) ) {
                         value = false;
-                        email.setError("Email invalid");
+                        username.setError("username invalid");
                     }
-                    if (!email_str.matches(EMAIL_PATTERN) ) {
-                        value = false;
-                        email.setError("Email invalid");
-                    }
-                    if (!password_str.matches(NAME_PATTERN) || !(password_str.length()>3) || !(password_str.length()<8) ) {
+                if (!email_str.matches(EMAIL_PATTERN) ) {
                         value = false;
                         email.setError("Email invalid");
                     }
-                    if (!address_str.matches(NAME_PATTERN ) ) {
+                 if (!password_str.matches(NAME_PATTERN) || (password_str.length()<3) || (password_str.length()>8) ) {
                         value = false;
-                        email.setError("Email invalid");
+                        password.setError("password invalid");
                     }
-                    if (!phone_str.matches(MOBILE_PATTERN) || !(phone_str.length()==10) ) {
+                    if (!address_str.matches(NAME_PATTERN ) || (address_str.length()<3) ) {
                         value = false;
-                        email.setError("Email invalid");
+                        address.setError("address invalid");
                     }
-                   if( value = true) {
+                if (!phone_str.matches(MOBILE_PATTERN) || !(phone_str.length()==10) ) {
+                        value = false;
+                        phonenumber.setError("phone number invalid");
+                    }
+                   if( value == true) {
                        int selectedId = radioGroup.getCheckedRadioButtonId();
                        RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
                        String radioButtonText = selectedRadioButton.getText().toString();
