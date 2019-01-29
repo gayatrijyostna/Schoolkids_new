@@ -22,8 +22,9 @@ public class ChangePassword extends Fragment {
    EditText password,conformpassword;
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         android.view.View view = inflater.inflate(R.layout.changepassword, container, false);
+
         SharedPreferences pref = getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-    final String username = pref.getString("Username", "as");
+        final String username = pref.getString("Username", "as");
         textView=view.findViewById(R.id.edit_userName);
         textView.setText(username);
         password=view.findViewById(R.id.edit_newpwd);

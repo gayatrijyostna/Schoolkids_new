@@ -143,19 +143,23 @@
                 android:id="@+id/Busno1"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:text="Bus no "
+                android:text="Bus name "
                 android:textColor="#000000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round"
+    >
             <Spinner
                 android:id="@+id/edit_busno1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:entries="@array/Select"
                 android:padding="10dp"
-                android:background="@drawable/round"
                 android:hint="dd"></Spinner>
+        </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

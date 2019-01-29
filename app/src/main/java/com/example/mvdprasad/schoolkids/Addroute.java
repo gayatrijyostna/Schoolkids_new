@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,20 @@ public class Addroute extends Fragment {
         Route_From=view.findViewById(R.id.Route_From);
         Route_To=view.findViewById(R.id.Route_To);
         AddRoute=view.findViewById(R.id.AddRoute);
+        Bus_Route_No.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+
+                if(s.length()>3)
+                {
+                    Bus_Route_No.setError("landmark invalid");
+                }
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+        });
         AddRoute.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

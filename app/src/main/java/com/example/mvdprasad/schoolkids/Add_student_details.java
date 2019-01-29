@@ -103,7 +103,9 @@ ArrayList<String> data=new ArrayList<>();
                     RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
                     String radioButtonText = selectedRadioButton.getText().toString();
                     db.insert_studentdetails(Rollno_str, Birthday_str, Name_str, Cell_no_str, Bus_no_str, Adress_str,Section_of_class_str,Father_name_str,Mother_name_str,Passwrd_str,radioButtonText);
-                    Intent i = new Intent(Add_student_details.this, Admin_page.class);
+                    Intent i = new Intent(Add_student_details.this, Navigation_drawer.class);
+                    i.setAction("Student details");
+                    startActivity(i);
                     startActivity(i);
                     Toast.makeText(Add_student_details.this, "successfully saved", Toast.LENGTH_SHORT).show();
                 }

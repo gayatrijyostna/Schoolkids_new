@@ -13,6 +13,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
+
 public class Viewlandmark extends FragmentActivity implements OnMapReadyCallback {
     private MapFragment fragment;
     private GoogleMap googleMap;
@@ -20,14 +22,19 @@ public class Viewlandmark extends FragmentActivity implements OnMapReadyCallback
     private double markerLong;
     private MarkerOptions markerPlace;
     Marker marker;
+    Database_admin db;
+    ArrayList<String> data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewlandmark);
+        db=new Database_admin(this);
+        data=new ArrayList<>();
+       data= db.getLandMark(getIntent().getStringExtra("BUSNO"));
         initilizeMap();
-        markerLat = 17.7856;
-        markerLong = 78.8956;
+        markerLat =Double.valueOf(data.get(0)).doubleValue();
+        markerLong =Double.valueOf(data.get(1)).doubleValue();
 
     }
 

@@ -35,6 +35,31 @@ public class Navigation_drawer extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        String action  = getIntent().getAction();
+        if (action.equals("OPEN_LANDMARKS"))
+        {
+            Route_landmarks f4 = new Route_landmarks();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.frame, f4);
+            ft.commit();
+        }
+        else if (action.equals("Route details"))
+        {
+            View_routedetails f3 = new View_routedetails();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.frame, f3);
+            ft.commit();
+        }
+else if(action.equals("Student details"))
+        {
+            Student_details sd = new Student_details();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.frame, sd);
+            ft.commit();
+        }
         View_routedetails f3 = new View_routedetails();
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();

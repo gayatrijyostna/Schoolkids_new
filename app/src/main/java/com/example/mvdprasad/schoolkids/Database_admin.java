@@ -262,6 +262,22 @@ public class Database_admin extends SQLiteOpenHelper {
         db.update(TABLE_NAME1, contentValues, "Bus_Route_No = ?",new String[] { route_No });
         return true;
     }
+    public ArrayList<String> getLandMark(String busno) {
+        data1 = new ArrayList();
+
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME1+ " where " + BUSROUTENO + " = '" + busno + "'"  , null);
+
+        if (cursor.moveToFirst()) {
+
+            do {
+                data1.add(cursor.getString(cursor.getColumnIndex(LATTITUDE)));
+                data1.add(cursor.getString(cursor.getColumnIndex(LONGITUDE)));
+            } while (cursor.moveToNext());
+        }
+        return data1;
+    }
 
     public void insert_studentdetails(String Rollno_str, String Birthday_str, String Name_str, String Cell_no_str, String Bus_no_str,String Adress_str,String Section_of_class_str,String Father_name_str,String Mother_name_str,String Passwrd_str,String Gender_str) {
         SQLiteDatabase sqLiteDatabase = getWritableDatabase();
