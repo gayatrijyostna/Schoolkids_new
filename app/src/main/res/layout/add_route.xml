@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginTop="40dp"
+            android:layout_marginLeft="10dp"
             android:text="Bus Route No "
             android:textSize="17dp" />
 
@@ -48,6 +49,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="40dp"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/round" />
 
@@ -66,13 +70,16 @@
             android:layout_height="wrap_content"
             android:text="Route Name "
             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
             android:textSize="17dp" />
 
 
 
         <EditText
+            android:paddingLeft="10dp"
             android:id="@+id/Route_Name"
             android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/round" />
@@ -92,12 +99,15 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Route From "
+            android:layout_marginLeft="10dp"
             android:textSize="17dp" />
 
 
         <EditText
+            android:paddingLeft="10dp"
             android:id="@+id/Route_From"
             android:layout_width="match_parent"
+            android:layout_marginRight="10dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:background="@drawable/round" />
@@ -117,16 +127,18 @@
             android:layout_height="wrap_content"
             android:text="Route To "
             android:layout_weight="1"
-
+            android:layout_marginLeft="10dp"
             android:textSize="17dp" />
 
 
 
         <EditText
+            android:paddingLeft="10dp"
             android:id="@+id/Route_To"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
+            android:layout_marginRight="10dp"
             android:background="@drawable/round" />
 
 
@@ -145,7 +157,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:padding="4dp"
-            android:background="#D2691E"
+            android:background="@drawable/oval"
             android:textColor="@android:color/white"
             android:layout_marginBottom="10dp"
             android:text="Add Route" />

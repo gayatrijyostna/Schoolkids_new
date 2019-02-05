@@ -31,6 +31,7 @@ ArrayList<Map<String,String>> data;
         recyclerView1.setLayoutManager(new LinearLayoutManager(getActivity()));
         data=new ArrayList<>();
         db=new Database_admin(getActivity());
+//        getActivity().setTitle( "VIEW ROUTE DETAILS" );
         data = db.getRoute();
         Recycler_viewroute recyclerAdapter = new Recycler_viewroute(getActivity(), data);
         recyclerView1.setAdapter(recyclerAdapter);
@@ -46,6 +47,7 @@ ArrayList<Map<String,String>> data;
             }
         });
         return view;
+
 
     }
 

@@ -139,6 +139,23 @@ public class Database_admin extends SQLiteOpenHelper {
         }
         return data;
     }
+
+    public ArrayList<String> getEmail(String email_str) {
+        data1 = new ArrayList();
+
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " where " + EMAIL + " = '" + email_str + "'", null);
+
+        if (cursor.moveToFirst()) {
+
+            do {
+             data1.add(cursor.getString(cursor.getColumnIndex(EMAIL)));
+
+            } while (cursor.moveToNext());
+        }
+        return data1;
+    }
     public ArrayList<Map<String, String>> getRetriveAll(String email) {
         data = new ArrayList();
 

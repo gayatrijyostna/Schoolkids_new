@@ -1,6 +1,8 @@
 package com.example.mvdprasad.schoolkids;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.RequiresApi;
@@ -11,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class SplashScreen extends AppCompatActivity {
-
+    public static final String MyPREFERENCES = "MyPrefs" ;
     private static int splashtimeout = 4000;
     Animation uptodown,downtoup;
     LinearLayout bottom_layout;
@@ -37,8 +39,12 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this, Admin_page.class);
-                startActivity(i);
+
+                    Intent i = new Intent( SplashScreen.this, Admin_page.class );
+                    startActivity(i);
+
+
+
                 overridePendingTransition(R.anim.enter_from_right, R.anim.exit_to_left);
 
             }

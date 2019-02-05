@@ -29,6 +29,7 @@ public class Route_landmarks extends Fragment {
         recyclerView1.setLayoutManager( new LinearLayoutManager( getActivity()));
         data=new ArrayList<>();
         db=new Database_admin(getActivity());
+        getActivity().setTitle( "ROUTE LANDMARKS" );
         data = db.getRoute();
         Recycler_landmark recyclerAdapter = new Recycler_landmark( getActivity(), data );
         recyclerView1.setAdapter( recyclerAdapter );

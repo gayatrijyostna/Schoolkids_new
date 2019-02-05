@@ -27,6 +27,8 @@ public class Student_details extends Fragment {
         RecyclerView recyclerView1 = view.findViewById( R.id.recycler5 );
         recyclerView1.setLayoutManager( new LinearLayoutManager( getActivity()));
         Database_admin DB1=new Database_admin( getActivity() );
+      //  getActivity().setTitle( "VIEW STUDENT DETAILS" );
+
         data2=DB1.getstudentdata(  );
         Recycler_studentdetails recyclerAdapter = new Recycler_studentdetails(getActivity(),data2);
         recyclerView1.setAdapter(recyclerAdapter);

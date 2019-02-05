@@ -1,6 +1,7 @@
 package com.example.mvdprasad.schoolkids;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -31,12 +32,14 @@ public class ChangePassword extends Fragment {
         conformpassword=view.findViewById(R.id.edit_confrmpwd);
         change_pwd=view.findViewById(R.id.change_pwd);
         db=new Database_admin(getActivity());
+        getActivity().setTitle( "CHANGE PASSWORD" );
         change_pwd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(password.getText().toString().equals(conformpassword.getText().toString()))
                 {
                     db.insertPassword(username,password.getText().toString());
+                    Intent i=new Intent( getActivity(),Admin_page.class );
                     Toast.makeText(getActivity(), "successfully changed the password", Toast.LENGTH_SHORT).show();
                 }
                 else

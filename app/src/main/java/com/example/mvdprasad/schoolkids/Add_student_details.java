@@ -67,6 +67,7 @@ ArrayList<String> data=new ArrayList<>();
             }
 
         };
+        getSupportActionBar().setTitle( "ADD STUDENT DETAILS" );
         Add.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,7 +117,6 @@ ArrayList<String> data=new ArrayList<>();
             }
         } );
     }
-
 
     boolean isEmpty(Spinner text){
         CharSequence str=text.getSelectedView().toString();

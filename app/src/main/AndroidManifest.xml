@@ -22,7 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Admin_page"></activity>
-        <activity android:name=".Admin_homepage" />
         <activity android:name=".Signup" />
         <activity
             android:name=".Navigation_drawer"

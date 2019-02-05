@@ -11,6 +11,7 @@ import android.text.InputType;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,16 +28,27 @@ public class Admin_page extends AppCompatActivity {
 boolean value=true;
     public static final String MyPREFERENCES = "MyPrefs" ;
     public static final String Username="Username";
+    public static final String Password="pswd";
     SharedPreferences sharedpreferences;
+    CheckBox checkBox;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.admin_login);
-
+        checkBox=findViewById( R.id.checkbox );
         email = findViewById(R.id.email);
         password = findViewById(R.id.pswd);
 
         Button login = findViewById(R.id.login);
+
+        SharedPreferences pref = this.getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+        final String name = pref.getString(Username, "");
+        final String password1 = pref.getString(Password, "");
+        if (!name.equals( "" )&& !password1.equals( "" )) {
+            Intent i = new Intent( Admin_page.this, Navigation_drawer.class );
+            startActivity(i);
+        }
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,10 +71,19 @@ boolean value=true;
                     data = db.getRetrive(username, pswd);
                     if (!data.isEmpty()) {
                         Intent i = new Intent(Admin_page.this, Navigation_drawer.class);
-                        sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-                        SharedPreferences.Editor editor = sharedpreferences.edit();
-                        editor.putString(Username, username);
-                        editor.commit();
+                        if(checkBox.isChecked()){
+                            sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedpreferences.edit();
+                            editor.putString(Username, username);
+                            editor.putString( Password, pswd);
+                            editor.apply();
+                        }
+                        else {
+                            sharedpreferences = getSharedPreferences( MyPREFERENCES, Context.MODE_PRIVATE );
+                            SharedPreferences.Editor editor = sharedpreferences.edit();
+                            editor.putString( Username, username );
+                            editor.commit();
+                        }
                         startActivity(i);
                     } else {
                         Toast.makeText(Admin_page.this, "invalid username and password", Toast.LENGTH_SHORT).show();

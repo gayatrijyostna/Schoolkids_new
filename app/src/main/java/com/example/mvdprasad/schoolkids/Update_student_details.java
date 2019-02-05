@@ -4,6 +4,8 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -48,13 +50,9 @@ public class Update_student_details extends AppCompatActivity implements View.On
        gender2=findViewById( R.id.edit_gender2 );
         update=findViewById(R.id.update1);
         delete=findViewById(R.id.delete);
-        back=findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Update_student_details.this,Navigation_drawer.class));
-            }
-        });
+        getSupportActionBar().setTitle( "UPDATE STUDENT DETAILS" );
+        getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+
         Rollno.setText(getIntent().getStringExtra("ROLL_NO"));
         Birthday.setText(getIntent().getStringExtra("DOB"));
         Name.setText(getIntent().getStringExtra("NAME1"));
@@ -163,5 +161,14 @@ public class Update_student_details extends AppCompatActivity implements View.On
         datePicker.setMaxDate(calendar.getTimeInMillis());
         dpDialog.show();
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -16,24 +16,6 @@
         android:layout_marginLeft="10dp">
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="ADD STUDENT DETAILS"
-            android:textColor="#2E8B57"
-            android:textSize="25dp"
-            android:textStyle="italic"
-            />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_marginTop="10dp"
-            android:alpha="0.3"
-            android:background="@drawable/gradient"></View>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -213,6 +195,7 @@
                 android:layout_width="90dp"
                 android:layout_height="wrap_content"
                 android:text="Gender "
+                android:layout_weight="1"
                 android:textColor="#000000"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -229,6 +212,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="MALE"
+                    android:layout_weight="1"
                     android:checked="true"
                     android:layout_marginLeft="25dp"/>
                 <RadioButton
@@ -237,6 +221,7 @@
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:text="FEMALE"
+                    android:layout_weight="1"
                     android:layout_marginLeft="25dp"/>
             </RadioGroup>
 

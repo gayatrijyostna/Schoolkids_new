@@ -10,6 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class Signup extends AppCompatActivity {
     private Database_admin dataBaseClass;
 
@@ -17,7 +19,7 @@ public class Signup extends AppCompatActivity {
     public static final String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     public static final String NAME_PATTERN = "[a-zA-Z., ]+([ '-][a-zA-Z., ]+)*";
     String name, username, email, password, address, phonenumber;
-
+ArrayList<String> data1=new ArrayList <>(  );
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,11 +74,18 @@ public class Signup extends AppCompatActivity {
                        int selectedId = radioGroup.getCheckedRadioButtonId();
                        RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
                        String radioButtonText = selectedRadioButton.getText().toString();
+                       data1=dataBaseClass.getEmail(email_str);
+   if(data1.isEmpty()) {
+    dataBaseClass.insertValues( name_str, username_str, email_str, password_str, address_str, phone_str, radioButtonText );
+    Intent i = new Intent( Signup.this, Admin_page.class );
+    startActivity( i );
+    Toast.makeText( Signup.this, "successfully saved", Toast.LENGTH_SHORT ).show();
 
-                       dataBaseClass.insertValues(name_str, username_str, email_str, password_str, address_str, phone_str, radioButtonText);
-                       Intent i = new Intent(Signup.this, Admin_page.class);
-                       startActivity(i);
-                       Toast.makeText(Signup.this, "successfully saved", Toast.LENGTH_SHORT).show();
+}
+                    else {
+    Toast.makeText( Signup.this, "email id already exists", Toast.LENGTH_SHORT ).show();
+
+}
                    }
                 } else {
                     Toast.makeText(Signup.this, "Plz fill the details", Toast.LENGTH_SHORT).show();
@@ -84,6 +93,7 @@ public class Signup extends AppCompatActivity {
                 }
             }
         });
+
 
     }
 }

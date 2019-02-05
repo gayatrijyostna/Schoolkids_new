@@ -51,6 +51,7 @@ public class Addroute extends Fragment {
                 String Route_To_str = Route_To.getText().toString().trim();
                if (!Bus_Route_No_str.equals("") && !Route_Name_str.equals("")&& !Route_From_str.equals("")&& !Route_To_str.equals("")) {
                    db=new Database_admin(getActivity());
+                   getActivity().setTitle( "ADD ROUTE DETAILS" );
                    db.insertRoute(Bus_Route_No_str, Route_Name_str, Route_From_str, Route_To_str);
                    View_routedetails f3 = new View_routedetails();
                    FragmentManager fm = getActivity().getSupportFragmentManager();

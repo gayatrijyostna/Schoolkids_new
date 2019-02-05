@@ -58,6 +58,7 @@ ImageView map;
         Button AddRoute=findViewById(R.id.AddRoute);
         map=findViewById(R.id.map);
         db=new Database_admin(this);
+        getSupportActionBar().setTitle( "ADD LANDMARKS" );
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

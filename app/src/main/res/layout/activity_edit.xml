@@ -15,11 +15,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-<Button
-    android:layout_width="50dp"
-    android:id="@+id/back"
-    android:layout_height="wrap_content"
-    android:background="@drawable/ic_arrow_back_black_24dp"/>
         <TextView
             android:id="@+id/adminpage"
             android:layout_width="match_parent"
@@ -52,16 +47,20 @@
             android:layout_weight="1"
             android:text="Bus Route No "
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:paddingLeft="5dp"/>
 
 
-        <EditText
+        <TextView
             android:id="@+id/Bus_Route_No"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:paddingLeft="10dp"
+            android:inputType="number"
             android:layout_marginTop="40dp"
+
             android:layout_weight="1"
-            android:background="@drawable/round" />
+            android:layout_marginRight="10dp" />
 
 
     </LinearLayout>
@@ -79,7 +78,8 @@
             android:layout_weight="1"
             android:text="Route Name "
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:paddingLeft="5dp"/>
 
 
         <EditText
@@ -87,7 +87,9 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:background="@drawable/round" />
+            android:paddingLeft="10dp"
+            android:background="@drawable/round"
+            android:layout_marginRight="10dp" />
 
 
     </LinearLayout>
@@ -107,14 +109,18 @@
             android:layout_weight="1"
             android:text="Route From "
             android:textColor="#000000"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:paddingLeft="5dp"/>
+
 
 
         <EditText
             android:id="@+id/Route_From"
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:paddingLeft="10dp"
             android:layout_weight="1"
+            android:layout_marginRight="10dp"
             android:background="@drawable/round" />
 
 
@@ -132,6 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Route To "
+            android:paddingLeft="5dp"
             android:textColor="#000000"
             android:textSize="16sp" />
 
@@ -141,6 +148,8 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/round" />
 
 
@@ -157,7 +166,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="18dp"
-            android:background="#D2691E"
+            android:background="@drawable/oval"
             android:text="UPDATE" />
 
         <Button
@@ -167,7 +176,7 @@
             android:layout_marginBottom="12dp"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="18dp"
-            android:background="#D2691E"
+            android:background="@drawable/oval"
             android:text="delete" />
     </LinearLayout>
 </LinearLayout>

@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:layout_marginTop="8dp">
-
+    android:layout_marginTop="5dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round"
             android:hint="NAME"
             android:textColorHint="#000000"
             android:padding="10dp"
@@ -21,11 +31,20 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"></EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round"
             android:hint="Surname"
             android:textColorHint="#000000"
             android:padding="10dp"
@@ -34,12 +53,20 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
 
-            />
+            /></android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
         <EditText
             android:id="@+id/mail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round"
             android:hint="Email"
             android:textColorHint="#000000"
             android:padding="10dp"
@@ -49,12 +76,20 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
 
-            />
+            /></android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
         <EditText
             android:id="@+id/pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round"
             android:hint="Password"
             android:inputType="textPassword"
             android:textColorHint="#000000"
@@ -63,12 +98,19 @@
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
-            />
+            /></android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <EditText
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round"
             android:hint="Address"
             android:maxLines="4"
             android:textColorHint="#000000"
@@ -78,12 +120,19 @@
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"
 
-            />
+            /></android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <EditText
             android:id="@+id/phn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/round"
             android:hint="Phone number"
             android:textColorHint="#000000"
             android:inputType="phone"
@@ -92,6 +141,8 @@
             android:layout_marginRight="10dp"
             android:layout_alignParentRight="true"
             android:layout_marginTop="10dp"/>
+
+        </android.support.design.widget.TextInputLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -101,6 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="gender"
+                android:layout_marginRight="15dp"
                 android:textSize="20dp"/>
             <RadioGroup
                 android:id="@+id/radiogroup"
@@ -138,9 +190,11 @@
             android:layout_height="wrap_content"
             android:paddingLeft="25dp"
             android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
             android:text="By signing up you agree to terms of service and privacy policy"
             />
 
     </LinearLayout>
 
 </LinearLayout>
+</ScrollView>

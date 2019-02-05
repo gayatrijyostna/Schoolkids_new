@@ -5,13 +5,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Edit extends AppCompatActivity {
-EditText Route_NO,Route_NAME,Route_From,Route_To;
+ TextView Route_NO;
+EditText Route_NAME,Route_From,Route_To;
 Button back,Update,delete;
 Database_admin db;
     @Override
@@ -24,13 +29,6 @@ Database_admin db;
         Route_To=findViewById(R.id.Route_To);
         Update=findViewById(R.id.Update);
         delete=findViewById(R.id.Delete);
-        back=findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-             startActivity(new Intent(Edit.this,Navigation_drawer.class));
-            }
-        });
       Route_NO.setText(getIntent().getStringExtra("BUSROUTENO"));
         Route_NAME.setText(getIntent().getStringExtra("ROUTENAME"));
         Route_From.setText(getIntent().getStringExtra("ROUTEFROM"));
@@ -72,5 +70,16 @@ Database_admin db;
                     Toast.makeText(Edit.this,"Data not Deleted",Toast.LENGTH_LONG).show();
             }
         });
+        getSupportActionBar().setTitle( "UPDATE ROUTE DETAILS" );
+        getSupportActionBar().setDisplayHomeAsUpEnabled( true );
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
