@@ -4,11 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.text.InputType;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -101,6 +97,15 @@ boolean value=true;
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Admin_page.this, Signup.class);
+                startActivity(i);
+            }
+        });
+
+        TextView forgotpwd = findViewById(R.id.Forgotpwd);
+        forgotpwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Admin_page.this, Forgotpwd.class);
                 startActivity(i);
             }
         });

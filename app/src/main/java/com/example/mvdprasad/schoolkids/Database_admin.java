@@ -139,6 +139,24 @@ public class Database_admin extends SQLiteOpenHelper {
         }
         return data;
     }
+    public ArrayList<Map<String, String>> getPassword(String username) {
+        data = new ArrayList();
+
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " where " + EMAIL + " = '" + username + "'", null);
+
+        if (cursor.moveToFirst()) {
+
+            do {
+                Map<String, String> hmap = new HashMap<>();
+                hmap.put(PASSWORD, cursor.getString(cursor.getColumnIndex(PASSWORD)));
+                data.add(hmap);
+
+            } while (cursor.moveToNext());
+        }
+        return data;
+    }
 
     public ArrayList<String> getEmail(String email_str) {
         data1 = new ArrayList();

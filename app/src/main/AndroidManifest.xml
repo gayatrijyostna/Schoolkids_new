@@ -32,6 +32,7 @@
         <activity android:name=".Busposition_activity" />
         <activity android:name=".Viewlandmark" />
         <activity android:name=".Add_landmark" />
+        <activity android:name=".Forgotpwd"></activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

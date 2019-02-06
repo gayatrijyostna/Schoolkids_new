@@ -105,10 +105,21 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/signup_here"
+    android:id="@+id/signup_here"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:text="Not a member? SignUp here"
+        android:gravity="center"
+    android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/Forgotpwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Not a member? SignUp here"
+        android:layout_marginTop="5dp"
+        android:text="Forgot Password?"
+        android:gravity="center"
         android:layout_marginLeft="10dp"/>
+
 </LinearLayout>
